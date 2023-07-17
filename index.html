@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Módulo de Compras</h2>
+        
+        <!-- Formulario para registrar una compra -->
+        <div id="registrar-compra" class="form-section">
+          <h3>Registrar Compra</h3>
+          <label for="compra-descuento">Descuento:</label>
+          <input type="text" id="compra-descuento">
+          <label for="compra-cantidad">Cantidad:</label>
+          <input type="text" id="compra-cantidad">
+          <label for="compra-proveedor">Proveedor:</label>
+          <select id="compra-proveedor">
+            <option value="">Seleccionar proveedor</option>
+            <!-- Opciones de proveedores -->
+          </select>
+          <button id="guardar-compra-btn">Guardar</button>
+        </div>
+        
+        <!-- Agregar productos a la compra -->
+        <div id="agregar-producto" class="form-section">
+          <h3>Agregar Producto</h3>
+          <select id="producto-seleccionado">
+            <option value="">Seleccionar producto</option>
+            <!-- Opciones de productos -->
+          </select>
+          <button id="agregar-producto-btn">Agregar</button>
+        </div>
+        
+        <!-- Detalle de la compra -->
+        <div id="detalle-compra" class="form-section">
+          <h3>Detalle de Compra</h3>
+          <table id="productos-table">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filas de productos agregados a la compra -->
+            </tbody>
+          </table>
+          <label for="compra-total">Total:</label>
+          <input type="text" id="compra-total" readonly>
+          <button id="guardar-detalle-btn">Guardar</button>
+        </div>
+        
+        <!-- Mostrar compras realizadas -->
+        <div id="mostrar-compras" class="form-section">
+          <h3>Mostrar Compras</h3>
+          <input type="text" id="buscar-proveedor" placeholder="Buscar por proveedor">
+          <button id="buscar-compras-btn">Buscar</button>
+          <table id="compras-table">
+            <thead>
+              <tr>
+                <th>Proveedor</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Filas de compras realizadas -->
+            </tbody>
+          </table>
+          <button id="ver-factura-btn">Ver Factura</button>
+        </div>
+      </div>
+</body>
+</html>
