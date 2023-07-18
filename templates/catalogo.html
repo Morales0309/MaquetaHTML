@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/statics/catalogo.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Módulo de Catálogos</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Ver Catálogo</a></li>
+            <li><a href="#">Agregar Elemento</a></li>
+            <li><a href="#">Editar Elemento</a></li>
+            <li><a href="#">Dar de Baja Elemento</a></li>
+            <li><a href="#">Ver Elementos Dados de Baja</a></li>
+            <li><a href="/index.html">Inicio</li>
+            <li><a href="#">Cerrar Sesión</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+      <section class="content">
+        <h2>Ver Catálogo</h2>
+        <table id="catalogo-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Talla</th>
+              <th>Proveedor</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Filas de elementos del catálogo -->
+          </tbody>
+        </table>
+      </section>
+    
+      <section class="content">
+        <h2>Agregar Elemento</h2>
+        <form id="agregar-elemento-form">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre">
+          <label for="categoria">Categoría:</label>
+          <input type="text" id="categoria">
+          <label for="talla">Talla:</label>
+          <input type="text" id="talla">
+          <label for="proveedor">Proveedor:</label>
+          <input type="text" id="proveedor">
+          <button id="guardar-elemento-btn">Guardar Elemento</button>
+        </form>
+      </section>
+    
+      <section class="content">
+        <h2>Editar Elemento</h2>
+        <form id="editar-elemento-form">
+          <label for="editar-nombre">Nombre:</label>
+          <input type="text" id="editar-nombre">
+          <label for="editar-categoria">Categoría:</label>
+          <input type="text" id="editar-categoria">
+          <label for="editar-talla">Talla:</label>
+          <input type="text" id="editar-talla">
+          <label for="editar-proveedor">Proveedor:</label>
+          <input type="text" id="editar-proveedor">
+          <button id="actualizar-elemento-btn">Actualizar Elemento</button>
+        </form>
+      </section>
+    
+      <section class="content">
+        <h2>Dar de Baja Elemento</h2>
+        <form id="dardebaja-elemento-form">
+          <label for="baja-nombre">Nombre:</label>
+          <input type="text" id="baja-nombre">
+          <button id="dardebaja-elemento-btn">Dar de Baja</button>
+        </form>
+      </section>
+    
+      <section class="content">
+        <h2>Ver Elementos Dados de Baja</h2>
+        <table id="elementos-dadosdebaja-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Talla</th>
+              <th>Proveedor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Filas de elementos dados de baja -->
+          </tbody>
+        </table>
+      </section>
+    
+      <footer>
+        <p>Derechos de Autor &copy; 2023 Proagro-Granada. Todos los derechos reservados.</p>
+      </footer>
+</body>
+</html>
