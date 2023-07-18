@@ -1,81 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/statics/style.css">
+  <script src="/statics/index.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Document</title>
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/templates/login.html">Iniciar Sesion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 </head>
+
 <body>
-    <div class="container">
-        <h2>Módulo de Compras</h2>
-        
-        <!-- Formulario para registrar una compra -->
-        <div id="registrar-compra" class="form-section">
-          <h3>Registrar Compra</h3>
-          <label for="compra-descuento">Descuento:</label>
-          <input type="text" id="compra-descuento">
-          <label for="compra-cantidad">Cantidad:</label>
-          <input type="text" id="compra-cantidad">
-          <label for="compra-proveedor">Proveedor:</label>
-          <select id="compra-proveedor">
+
+  <div class="container">
+    <h2 class="mb-4">Módulo de Compras</h2>
+
+    <!-- Formulario para registrar una compra -->
+    <div id="registrar-compra" class="form-section">
+        <h3 class="mb-3">Registrar Compra</h3>
+        <label for="compra-descuento" class="form-label">Descuento:</label>
+        <input type="text" id="compra-descuento" class="form-control">
+        <label for="compra-cantidad" class="form-label">Cantidad:</label>
+        <input type="text" id="compra-cantidad" class="form-control">
+        <label for="compra-proveedor" class="form-label">Proveedor:</label>
+        <select id="compra-proveedor" class="form-select">
             <option value="">Seleccionar proveedor</option>
             <!-- Opciones de proveedores -->
-          </select>
-          <button id="guardar-compra-btn">Guardar</button>
-        </div>
-        
-        <!-- Agregar productos a la compra -->
-        <div id="agregar-producto" class="form-section">
-          <h3>Agregar Producto</h3>
-          <select id="producto-seleccionado">
+        </select>
+        <br>
+        <br>
+        <button id="guardar-compra-btn" class="btn btn-primary">Guardar</button>
+    </div>
+
+    <!-- Agregar productos a la compra -->
+    <div id="agregar-producto" class="form-section">
+        <h3 class="mb-3">Agregar Producto</h3>
+        <select id="producto-seleccionado" class="form-select">
             <option value="">Seleccionar producto</option>
             <!-- Opciones de productos -->
-          </select>
-          <button id="agregar-producto-btn">Agregar</button>
-        </div>
-        
-        <!-- Detalle de la compra -->
-        <div id="detalle-compra" class="form-section">
-          <h3>Detalle de Compra</h3>
-          <table id="productos-table">
+        </select>
+        <br>
+        <br>
+        <button id="agregar-producto-btn" class="btn btn-primary">Agregar</button>
+    </div>
+
+    <!-- Detalle de la compra -->
+    <div id="detalle-compra" class="form-section">
+        <h3 class="mb-3">Detalle de Compra</h3>
+        <table id="productos-table" class="table">
             <thead>
-              <tr>
-                <th>Producto</th>
-                <th>Cantidad</th>
-                <th>Precio Unitario</th>
-                <th>Subtotal</th>
-              </tr>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                </tr>
             </thead>
             <tbody>
-              <!-- Filas de productos agregados a la compra -->
+                <!-- Filas de productos agregados a la compra -->
             </tbody>
-          </table>
-          <label for="compra-total">Total:</label>
-          <input type="text" id="compra-total" readonly>
-          <button id="guardar-detalle-btn">Guardar</button>
-        </div>
-        
-        <!-- Mostrar compras realizadas -->
-        <div id="mostrar-compras" class="form-section">
-          <h3>Mostrar Compras</h3>
-          <input type="text" id="buscar-proveedor" placeholder="Buscar por proveedor">
-          <button id="buscar-compras-btn">Buscar</button>
-          <table id="compras-table">
+        </table>
+        <label for="compra-total" class="form-label">Total:</label>
+        <input type="text" id="compra-total" class="form-control" readonly>
+        <br>
+        <br>
+        <button id="guardar-detalle-btn" class="btn btn-primary">Guardar</button>
+    </div>
+
+    <!-- Mostrar compras realizadas -->
+    <div id="mostrar-compras" class="form-section">
+        <h3 class="mb-3">Mostrar Compras</h3>
+        <input type="text" id="buscar-proveedor" class="form-control mb-3" placeholder="Buscar por proveedor">
+        <br>
+        <button id="buscar-compras-btn" class="btn btn-primary">Buscar</button>
+        <br>
+        <br>
+        <table id="compras-table" class="table">
             <thead>
-              <tr>
-                <th>Proveedor</th>
-                <th>Fecha</th>
-                <th>Acciones</th>
-              </tr>
+                <tr>
+                    <th>Proveedor</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
             </thead>
             <tbody>
-              <!-- Filas de compras realizadas -->
+                <!-- Filas de compras realizadas -->
             </tbody>
-          </table>
-          <button id="ver-factura-btn">Ver Factura</button>
-        </div>
-      </div>
+        </table>
+        <br>
+        <button id="ver-factura-btn" class="btn btn-primary">Ver Factura</button>
+        <br>
+    </div>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
